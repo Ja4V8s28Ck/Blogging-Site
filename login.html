@@ -4,43 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Blogosphere - Login</title>
+  <link rel="icon" type="image/x-icon" href="img/blog.png">
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body style="background-image: url('img/in.jpg');background-size: cover;">
+<body style="background-image: url('img/in.jpg');background-size: 100%;">
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container"><img src="img/logo.png" class="logo" alt=""/><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list fs-6"></i></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="edit.html">Edit</a></li>
-          <li class="nav-item"><a class="nav-link" href="blogpost.html">Blog Post</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="signin.html">Sign in</a></li>
-          <li class="nav-item"><a id="togglemode" class="nav-link" role="button"><i class="bi bi-brightness-high-fill fs-6"></i></a></li>
+         <li class="nav-item"><a class="nav-link" href="/">Back to Home</a></li>
+          <li class="nav-brand"><a id="togglemode" class="nav-link" role="button"><i class="bi bi-brightness-high-fill fs-6"></i></a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="position-absolute top-50 start-50 translate-middle inCard card p-5 mt-4">
-      <form class="row">
-        <div class="input-group mb-3 input-group-lg">
-          <span class="input-group-text fw-bold">&</span>
-          <input type="text" class="form-control" id="user" placeholder="Username" required>
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="col-5 mx-auto">
+        <div class="card card-body inCard">
+          <form method="post" action="/login" class="mx-3" enctype="application/x-www-form-urlencoded">
+            <div class="input-group mt-3 mb-3 input-group-lg">
+              <i class="input-group-text bi bi-person-fill ebtn"></i>
+              <input type="text" class="form-control" name="user" placeholder="Username" minlength="4" maxlength="18" title="Username must be 8-18 characters long." required>
+            </div>
+            <div class="input-group input-group-lg text-nowrap mb-3">
+              <i id="ci1" class="input-group-text bi bi-shield-lock-fill ebtn"></i>
+              <input id="pass1" type="password" class="form-control" name="pass1" placeholder="Password" minlength="3" maxlength="18" title="Password must be 8-18 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji." required>
+              <i id="pbtn" class="input-group-text bi bi-shield pbtn"></i>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn rounded inButton fs-6">Submit</button>
+            </div>
+          </form>
+          <div class="text-center mt-2">
+            Not a member? <strong><a href="/signup">Sign in</a></strong>
+          </div>
         </div>
-        <div class="input-group mb-3 input-group-lg">
-          <span class="input-group-text fw-bold">#</span>
-          <input type="password" class="form-control rounded-end" id="pass1"  placeholder="Password" required>
-          <button type="button" class="d-none"></button>
-        </div>
-        <div class="d-grid">
-          <button type="button" class="btn rounded inButton">Submit</button>
-        </div>
-      </form>
-      <div class="text-center mt-2">
-        Not a member? <strong><a href="/signin">Sign in</a></strong>
       </div>
     </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>
