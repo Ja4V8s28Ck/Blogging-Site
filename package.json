@@ -1,0 +1,23 @@
+{
+  "name": "dara",
+  "author": "Ja4V8s28Ck",
+  "module": "server.js",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bun-types": "^1.0.2",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.5.1",
+    "nanoid": "^5.0.1",
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "h": "bun --hot run server.js ",
+    "w": "bun --watch run server.js"
+  }
+}
